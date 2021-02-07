@@ -11,7 +11,7 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [questions, setQuestions] = useState(data);
 
-  console.log(questions);
+  // console.log(questions);
 
   // const bozo = data.map((q) => {
   //   return q.title;

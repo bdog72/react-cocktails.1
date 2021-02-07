@@ -74,5 +74,14 @@ const menu = [
     img: './images/item-9.jpeg',
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: 'Bozo Boy',
+    category: 'bozos',
+    price: 1.99,
+    img:
+      'https://images.pexels.com/photos/6422934/pexels-photo-6422934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 export default menu;
