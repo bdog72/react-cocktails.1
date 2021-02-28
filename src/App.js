@@ -1,45 +1,37 @@
 //
 //
+
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Accordion from './projects-4-5-6/4-accordion/setup/src/App';
-import MainMenu from './projects-4-5-6/5-menu/setup/src/App';
+// import pages
+import Home from './pages/Home';
+import About from './pages/About';
 
-import Tabs from './projects-4-5-6/6-tabs/setup/src/App';
+import SingleCocktail from './pages/SingleCocktail';
+import Error from './pages/Error';
 
-import './App.scss';
+// import components
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
-      <div>
-        <div className='app__link-container'>
-          <Link to='/accordion'>Accordion</Link>
-          <Link to='/menu'>Menu</Link>
-          <Link to='/tabs'>Tabs</Link>
-        </div>
-
-        {/* <hr /> */}
-
-        <Switch>
-          <Route exact path='/accordion'>
-            <Accordion />
-          </Route>
-          <Route exact path='/menu'>
-            <MainMenu />
-          </Route>
-          <Route exact path='/tabs'>
-            <Tabs />
-          </Route>
-          {/* <Route path='/tours'>
-            <Tours />
-          </Route>
-          <Route path='/reviews'>
-            <Reviews />
-          </Route> */}
-        </Switch>
-      </div>
+      <Navbar />
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route exact path='/cocktail/:id'>
+          <SingleCocktail />
+        </Route>
+        <Route path='*'>
+          <Error />
+        </Route>
+      </Switch>
     </Router>
   );
 }
